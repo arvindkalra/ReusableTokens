@@ -1,0 +1,21 @@
+(0) 0x86f4098cad9d5e44fbcb1d2f87d88adbe2a4d004
+(1) 0x150cbd434d7a6180893c5e8caefa9d813025e497
+(2) 0xe6e22b47a52d9b7ff004e58ce65df68d22308040
+(3) 0xe1f1bbe86396df406e78a877e685bda81b10744c
+(4) 0x831d66d7ec834100010f37ef5fdb2687d9aaa0e8
+(5) 0xafa19cd10587bb15e0dc69010bc271ebbc63c68d
+(6) 0x27be1a5200982d0c3cf201e956cc312aaf2d4806
+(7) 0x8ed6947f8ce997db419f7704a1b2cf15d2d7598d
+(8) 0x3539b1dea3a7473ff022f0fce8d564e5932bc98b
+(9) 0xb387cb1b41010c135ee1eed735e45e9be64fbb1e
+
+
+let token
+
+ERC20Standard.deployed().then(inst=>{token = inst})
+
+token.totalSupply().then(inst=>{console.log(inst.toNumber())})
+
+token.balanceOf('0x86f4098cad9d5e44fbcb1d2f87d88adbe2a4d004').then(inst=>{console.log(inst.toNumber())})
+
+token.balanceOf('0x150cbd434d7a6180893c5e8caefa9d813025e497').then(inst=>{console.log(inst.toNumber())})
