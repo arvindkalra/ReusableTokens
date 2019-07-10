@@ -12,7 +12,7 @@
 
 let token
 
-ERC20Standard.deployed().then(inst=>{token = inst})
+BasicERC721.deployed().then(inst=>{token = inst})
 
 token.totalSupply().then(inst=>{console.log(inst.toNumber())})
 

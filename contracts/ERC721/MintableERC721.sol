@@ -3,8 +3,14 @@ pragma solidity >=0.4.21 <0.6.0;
 import "./ERC721.sol";
 import "./ERC721Metadata.sol";
 import "./MinterRole.sol";
+import "./BasicERC721.sol";
 
-contract MintableERC721 is ERC721, ERC721Metadata, MinterRole{
+contract MintableERC721 is BasicERC721, MinterRole{
+
+    constructor(string memory name, string memory symbol)
+    public
+    BasicERC721(name, symbol)
+    {}
 
     /**
     * @dev Function to mint tokens.
