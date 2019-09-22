@@ -1,20 +1,21 @@
-(0) 0x86f4098cad9d5e44fbcb1d2f87d88adbe2a4d004
-(1) 0x150cbd434d7a6180893c5e8caefa9d813025e497
-(2) 0xe6e22b47a52d9b7ff004e58ce65df68d22308040
-(3) 0xe1f1bbe86396df406e78a877e685bda81b10744c
-(4) 0x831d66d7ec834100010f37ef5fdb2687d9aaa0e8
-(5) 0xafa19cd10587bb15e0dc69010bc271ebbc63c68d
-(6) 0x27be1a5200982d0c3cf201e956cc312aaf2d4806
-(7) 0x8ed6947f8ce997db419f7704a1b2cf15d2d7598d
-(8) 0x3539b1dea3a7473ff022f0fce8d564e5932bc98b
-(9) 0xb387cb1b41010c135ee1eed735e45e9be64fbb1e
-
+(0) 0xc373b7514eb6de7bf3cd0acf2ed349c60fdfd212
+(1) 0x7ae4b8fc3a4f712908552648d310a64afc2b3043
+(2) 0x3ce6ad5c75d22690e7cf15af94c037e7e1129d7f
+(3) 0xb7b75bfe39af8f9ed61eefc3d1dab5dce0371e8b
+(4) 0xeef9a6f46c7cda2a74b17d267670362bb421eec7
+(5) 0xdc19a2c0e2d52d21e1dba2ccf834feaeac41e41d
+(6) 0x62c9e5b6e3bf335af4fd18d03007312875e3d8f0
+(7) 0xc9d35624c156661095dd4c474eff08c7b1f97db9
+(8) 0xaa115ed0fcfb271874e8b93c0b18fa78181736e2
+(9) 0x7c5c8631ac4fe3c484510f0eba52d2650937db7f
 
 let token
 
 BasicERC721.deployed().then(inst=>{token = inst})
 
 token.totalSupply().then(inst=>{console.log(inst.toNumber())})
+
+.then(inst=>{console.log(inst.toNumber())})
 
 token.balanceOf('0x86f4098cad9d5e44fbcb1d2f87d88adbe2a4d004').then(inst=>{console.log(inst.toNumber())})
 

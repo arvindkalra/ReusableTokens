@@ -15,12 +15,16 @@ contract BasicERC721  is ERC721, ERC721Metadata, ERC721Enumerable{
         _mint(to, tokenId);
     }
 
-    function burn(address owner, uint256 tokenId) public {
-        _burn(owner, tokenId);
-    }
-
     function burn(uint256 tokenId) public {
-        _burn(tokenId);
+        _burn(msg.sender, tokenId);
     }
 
+    function setTokenURI(uint256 tokenId, string memory uri) public{
+        require(ownerOf(tokenId) == msg.sender, "ERC721: Sender is not owner of this NFT");
+        _setTokenURI(tokenId, uri);
+    }
+
+    function getTokensForSender() public view returns (uint256[] memory){
+        return _tokensOfOwner(msg.sender);
+    }
 }
